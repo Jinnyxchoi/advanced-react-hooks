@@ -5,8 +5,8 @@ import * as React from 'react'
 
 function MessagesDisplay({messages}) {
   const containerRef = React.useRef()
-  // 🐨 replace useEffect with useLayoutEffect
-  React.useEffect(() => {
+  // with useLayoutEffect, we have a chance to change stuff in the DOM before the browser has a chance to paint the screen.This way, the browser only paints the screen once.
+  React.useLayoutEffect(() => {
     containerRef.current.scrollTop = containerRef.current.scrollHeight
   })
 
