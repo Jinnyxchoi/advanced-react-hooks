@@ -13,7 +13,6 @@ import {
 
 function useSafeDispatch(dispatch) {
   const mountedRef = React.useRef(false)
-
   React.useEffect(() => {
     mountedRef.current = true
     return () => {
